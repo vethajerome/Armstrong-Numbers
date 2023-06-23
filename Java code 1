@@ -1,0 +1,35 @@
+import java.util.*;
+class  Main 
+{
+    public static void main(String args[])
+    {
+        Scanner g=new Scanner(System.in);
+        int a=g.nextInt();
+        int b=g.nextInt();
+        int r,d,m,n,sum;
+        for(int i=a;i<b;i++)
+        {
+            sum=0;
+            d=0;
+            m=i;
+            n=i;
+            
+            while(m>0)
+            {
+                r=m%10;
+                d++;
+                m=m/10;
+            }
+            
+            while(n>0)
+            {
+                r=n%10;
+                sum+=Math.pow(r,d);
+                n=n/10;
+            }
+            if(sum==i)
+            System.out.print(sum+" ");
+        }
+    }
+}
+       
